@@ -1,0 +1,24 @@
+{
+  "name": "dist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://minkhant1999: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@github.com/minkhant1999/aquatic-plants.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minkhant1999/aquatic-plants/issues"
+  },
+  "homepage": "https://github.com/minkhant1999/aquatic-plants#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
