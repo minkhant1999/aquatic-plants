@@ -1,103 +1,187 @@
 <nav class="bg-gray-800">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-16">
-
-            <div class="flex-1 flex items-center justify-start sm:items-stretch">
-                <div class="flex-shrink-0 flex items-center">
-                </div>
-                <div class="hidden sm:block sm:ml-6">
-                    <div class="flex space-x-4">
-                        <a mat-button routerLink="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
-                        <a mat-button (click)="openProductTab()" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Products</a>
-                        <a mat-button target="_blank" rel="noreferrer,noopener" href="https://tropica.com/en/guide/" class=" text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                            <div class="flex items-center">
-                                Guide
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                    <path
-                                        d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                                    <path
-                                        d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                                </svg>
-                            </div>
-                        </a>
-                        <a mat-button routerLink="/child-a" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Forum</a>
-                    </div>
-                </div>
-                <div class="ml-6 sm:hidden cursor-pointer" (click)="openNav()">
-                    <svg *ngIf="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    <svg *ngIf="navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </div>
-            </div>
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button (click)="openCart()" [matBadge]="totalItems" [matBadgeHidden]="!totalItems" matBadgeColor="accent" matBadgePosition="above after" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                </button>
-            </div>
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="flex-1 flex items-center justify-start sm:items-stretch">
+        <div class="flex-shrink-0 flex items-center"></div>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <a
+              mat-button
+              routerLink="/"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >Dashboard</a
+            >
+            <a
+              mat-button
+              (click)="openProductTab()"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >Products</a
+            >
+            <a
+              mat-button
+              target="_blank"
+              rel="noreferrer,noopener"
+              href="https://tropica.com/en/guide/"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              <div class="flex items-center">
+                Guide
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                  />
+                  <path
+                    d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
         </div>
-
-        <!-- mobile nav -->
-        <div *ngIf="navOpen" class="px-2 pt-2 pb-3 space-y-1">
-            <a mat-button (click)="open(['/'])" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
-            <a mat-button (click)="openProductTab()" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Products</a>
-            <a mat-button target="_blank" rel="noreferrer,noopener" href="https://tropica.com/en/guide/" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Guide</a>
-            <a mat-button (click)="open(['/child-a'])" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Forum</a>
+        <div class="ml-6 sm:hidden cursor-pointer" (click)="openNav()">
+          <svg
+            *ngIf="!navOpen"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            *ngIf="navOpen"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </div>
-        <!-- start of tab -->
-        <div *ngIf="tabOpen">
-            <div class="flex flex-col mx-5 md:flex-row text-gray-300 pb-3">
-                <a mat-button (click)="open(['plants'])" class="block py-5 px-4">
-                    Plants
-                </a>
-                <a mat-button (click)="open(['products'])" class="block py-5 px-4">
-                    Products
-                </a>
-                <a mat-button (click)="open(['fishes'])" class="block py-5 px-4">
-                    Fishes
-                </a>
-            </div>
-        </div>
-        <!-- end of tab -->
+      </div>
+      <div
+        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+      >
+        <button
+          (click)="openCart()"
+          [matBadge]="totalItems"
+          [matBadgeHidden]="!totalItems"
+          matBadgeColor="accent"
+          matBadgePosition="above after"
+          class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
-    <!-- Test -->
 
-    <!-- shopping carts -->
-    <div *ngIf="cartOpen" class=" pt-2 pb-3 text-white flex flex-col items-center justify-center space-y-4">
-        <div *ngFor="let product of carts" class="flex items-center">
-            <div class="mr-4">
-                <img [src]="product.image" class="w-14 h-16 object-cover rounded">
-            </div>
-            <div class="w-44">
-                <p class="font-medium">
-                    {{product.name}}
-                </p>
-                <p class="text-sm text-gray-400">
-                    {{product.price.toLocaleString()}} <span class="text-gray-200">&times;{{product.quantity}}</span>
-                </p>
-
-            </div>
-            <div>
-                <button (click)="removeFromCart(product)" class="text-white text-2xl">&times;</button>
-            </div>
-        </div>
-        <div class="text-white ">
-            <div>
-                Total: {{totalAmount.toLocaleString()}} Kyats
-            </div>
-            <div class="mt-4 items-center">
-                <button mat-raised-button class="bg-green-700 text-white" routerLink="/checkout" (click)='this.cartOpen=false'>
-                    Checkout
-                </button>
-            </div>
-        </div>
+    <!-- mobile nav -->
+    <div *ngIf="navOpen" class="px-2 pt-2 pb-3 space-y-1">
+      <a
+        mat-button
+        (click)="open(['/'])"
+        class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+        >Dashboard</a
+      >
+      <a
+        mat-button
+        (click)="openProductTab()"
+        class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+        >Products</a
+      >
+      <a
+        mat-button
+        target="_blank"
+        rel="noreferrer,noopener"
+        href="https://tropica.com/en/guide/"
+        class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+        >Guide</a
+      >
     </div>
+    <!-- start of tab -->
+    <div *ngIf="tabOpen">
+      <div class="flex flex-col mx-5 md:flex-row text-gray-300 pb-3">
+        <a mat-button (click)="open(['plants'])" class="block py-5 px-4">
+          Plants
+        </a>
+        <a mat-button (click)="open(['products'])" class="block py-5 px-4">
+          Products
+        </a>
+        <a mat-button (click)="open(['fishes'])" class="block py-5 px-4">
+          Fishes
+        </a>
+      </div>
+    </div>
+    <!-- end of tab -->
+  </div>
+  <!-- Test -->
+
+  <!-- shopping carts -->
+  <div
+    *ngIf="cartOpen"
+    class="pt-2 pb-3 text-white flex flex-col items-center justify-center space-y-4"
+  >
+    <div *ngFor="let product of carts" class="flex items-center">
+      <div class="mr-4">
+        <img [src]="product.image" class="w-14 h-16 object-cover rounded" />
+      </div>
+      <div class="w-44">
+        <p class="font-medium">
+          {{ product.name }}
+        </p>
+        <p class="text-sm text-gray-400">
+          {{ product.price.toLocaleString() }}
+          <span class="text-gray-200">&times;{{ product.quantity }}</span>
+        </p>
+      </div>
+      <div>
+        <button (click)="removeFromCart(product)" class="text-white text-2xl">
+          &times;
+        </button>
+      </div>
+    </div>
+    <div class="text-white">
+      <div>Total: {{ totalAmount.toLocaleString() }} Kyats</div>
+      <div class="mt-4 items-center">
+        <button
+          mat-raised-button
+          class="bg-green-700 text-white"
+          routerLink="/checkout"
+          (click)="this.cartOpen = false"
+        >
+          Checkout
+        </button>
+      </div>
+    </div>
+  </div>
 </nav>
