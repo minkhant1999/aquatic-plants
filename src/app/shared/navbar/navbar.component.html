@@ -132,12 +132,14 @@
     </div>
     <!-- start of tab -->
     <div *ngIf="tabOpen">
-      <div class="flex flex-col mx-5 md:flex-row text-gray-300 pb-3">
+      <div
+        class="flex flex-col mx-5 md:flex-row text-gray-300 pb-3 justify-center"
+      >
         <a mat-button (click)="open(['plants'])" class="block py-5 px-4">
           Plants
         </a>
         <a mat-button (click)="open(['products'])" class="block py-5 px-4">
-          Products
+          Relative Products
         </a>
         <a mat-button (click)="open(['fishes'])" class="block py-5 px-4">
           Fishes
